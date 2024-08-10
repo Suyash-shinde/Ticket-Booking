@@ -25,5 +25,12 @@ const movieSchema = new Schema({
             }
         }]
     },
+    seats:{
+        type:[{
+            type: Schema.Types.ObjectId,
+            ref:'Seat'
+        }]
+    },
+    timestams: true,
 })
 export const Movie=mongoose.model("Movie", movieSchema);

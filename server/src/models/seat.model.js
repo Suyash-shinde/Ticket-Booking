@@ -6,9 +6,17 @@ const seatSchema = new Schema({
         required:true,
         unique:true,
     },
-    reserved:{
+    isBooked:{
         type:Boolean,
         required:true,
     },
+    isVisible:{
+        type:Boolean,
+        required:true,
+    },
+    onHold:{
+        type:Boolean,
+        required:true,
+    }
 })
 export const Seat=mongoose.model("Seat", seatSchema);
